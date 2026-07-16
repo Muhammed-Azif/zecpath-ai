@@ -1,0 +1,36 @@
+{
+  "candidate_id": "",
+  "full_name": "",
+  "email": "",
+  "phone": "",
+  "location": "",
+  "summary": "",
+  "designation": "",
+  "skills": [],
+  "education": [
+    {
+      "degree": "",
+      "college": "",
+      "year": "",
+      "percentage": ""
+    }
+  ],
+  "experience": [
+    {
+      "company": "",
+      "role": "",
+      "duration": "",
+      "responsibilities": []
+    }
+  ],
+  "projects": [
+    {
+      "project_name": "",
+      "technologies": [],
+      "description": ""
+    }
+  ],
+  "certifications": [],
+  "languages": [],
+  "soft_skills": []
+} 
