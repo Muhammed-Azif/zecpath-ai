@@ -1,0 +1,9 @@
+{
+  "source_file": "priya_sharma_resume.pdf",
+  "file_type": "pdf",
+  "char_count": 861,
+  "extracted_at": 1784291169.6554441,
+  "raw_text": "PRIYA SHARMA\npriya.sharma@example.com | +91-9876543210 | Bengaluru, India\nSUMMARY\nBackend engineer with 4 years of experience building scalable APIs\nand event-driven systems using Python and Node.js.\nSKILLS\n- Python - Django - FastAPI - PostgreSQL\n- Docker - AWS (EC2, S3, Lambda) - Kafka\nWORK EXPERIENCE\nBackend Engineer, Nimbus Systems (2021 - Present)\n- Designed a microservices architecture serving 2M+ daily requests\n- Reduced API latency by 38% through query optimization\nSoftware Engineer, CodeForge Labs (2019 - 2021)\n* Built internal tooling for automated deployment pipelines\nEDUCATION\nB.Tech in Computer Science, RV College of Engineering, 2019\nCERTIFICATIONS\nCertification Year\nAWS Certified Developer 2022\nCertified Kubernetes Administrator 2023\n\n[TABLE]\nCertification | Year\nAWS Certified Developer | 2022\nCertified Kubernetes Administrator | 2023",
+  "cleaned_text": "Priya Sharma\npriya.sharma@example.com | +91-9876543210 | Bengaluru, India\nSummary\nBackend engineer with 4 years of experience building scalable APIs\nand event-driven systems using Python and Node.js.\nSkills\n- Python - Django - FastAPI - PostgreSQL\n- Docker - AWS (EC2, S3, Lambda) - Kafka\nWork Experience\nBackend Engineer, Nimbus Systems (2021 - Present)\n- Designed a microservices architecture serving 2M+ daily requests\n- Reduced API latency by 38% through query optimization\nSoftware Engineer, CodeForge Labs (2019 - 2021)\n- Built internal tooling for automated deployment pipelines\nEducation\nB.Tech in Computer Science, RV College of Engineering, 2019\nCertifications\nCertification Year\nAWS Certified Developer 2022\nCertified Kubernetes Administrator 2023\n\n[TABLE]\nCertification | Year\nAWS Certified Developer | 2022\nCertified Kubernetes Administrator | 2023",
+  "output_path": null
+}

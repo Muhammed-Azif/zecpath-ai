@@ -1,0 +1,9 @@
+=== Resume Text Extraction Engine - Test Run @ Fri Jul 17 17:56:09 2026 ===
+
+[PASS] priya_sharma_resume.pdf
+  chars_extracted: 861
+
+[PASS] rahul_verma_resume.docx
+  chars_extracted: 661
+
+=== Summary: 2/2 passed ===

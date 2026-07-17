@@ -1,0 +1,25 @@
+Priya Sharma
+priya.sharma@example.com | +91-9876543210 | Bengaluru, India
+Summary
+Backend engineer with 4 years of experience building scalable APIs
+and event-driven systems using Python and Node.js.
+Skills
+- Python - Django - FastAPI - PostgreSQL
+- Docker - AWS (EC2, S3, Lambda) - Kafka
+Work Experience
+Backend Engineer, Nimbus Systems (2021 - Present)
+- Designed a microservices architecture serving 2M+ daily requests
+- Reduced API latency by 38% through query optimization
+Software Engineer, CodeForge Labs (2019 - 2021)
+- Built internal tooling for automated deployment pipelines
+Education
+B.Tech in Computer Science, RV College of Engineering, 2019
+Certifications
+Certification Year
+AWS Certified Developer 2022
+Certified Kubernetes Administrator 2023
+
+[TABLE]
+Certification | Year
+AWS Certified Developer | 2022
+Certified Kubernetes Administrator | 2023

@@ -1,0 +1,9 @@
+{
+  "source_file": "rahul_verma_resume.docx",
+  "file_type": "docx",
+  "char_count": 661,
+  "extracted_at": 1784291169.6777377,
+  "raw_text": "RAHUL VERMA\nrahul.verma@example.com | +91-9123456780 | Pune, India\nOBJECTIVE\nFrontend developer with 3 years of experience in React and TypeScript, seeking a role building accessible, high-performance web applications.\nskills\n• React  • TypeScript  • Redux  • Tailwind CSS  • Jest\nWork Experience\nFrontend Developer, Bluepeak Digital (2022 - Present)\n• Rebuilt the design system used across 6 internal products\n• Improved Lighthouse performance score from 61 to 94\nEDUCATION\nB.E. in Information Technology, Pune Institute of Technology, 2021\nCERTIFICATIONS\n[TABLE]\nCertification | Year\nMeta Front-End Developer Certificate | 2023\nGoogle UX Design Certificate | 2022",
+  "cleaned_text": "Rahul Verma\nrahul.verma@example.com | +91-9123456780 | Pune, India\nObjective\nFrontend developer with 3 years of experience in React and TypeScript, seeking a role building accessible, high-performance web applications.\nSkills\n- React - TypeScript - Redux - Tailwind CSS - Jest\nWork Experience\nFrontend Developer, Bluepeak Digital (2022 - Present)\n- Rebuilt the design system used across 6 internal products\n- Improved Lighthouse performance score from 61 to 94\nEducation\nB.E. in Information Technology, Pune Institute of Technology, 2021\nCertifications\n[TABLE]\nCertification | Year\nMeta Front-End Developer Certificate | 2023\nGoogle UX Design Certificate | 2022",
+  "output_path": null
+}

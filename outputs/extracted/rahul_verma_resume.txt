@@ -1,0 +1,17 @@
+Rahul Verma
+rahul.verma@example.com | +91-9123456780 | Pune, India
+Objective
+Frontend developer with 3 years of experience in React and TypeScript, seeking a role building accessible, high-performance web applications.
+Skills
+- React - TypeScript - Redux - Tailwind CSS - Jest
+Work Experience
+Frontend Developer, Bluepeak Digital (2022 - Present)
+- Rebuilt the design system used across 6 internal products
+- Improved Lighthouse performance score from 61 to 94
+Education
+B.E. in Information Technology, Pune Institute of Technology, 2021
+Certifications
+[TABLE]
+Certification | Year
+Meta Front-End Developer Certificate | 2023
+Google UX Design Certificate | 2022
