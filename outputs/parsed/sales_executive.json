@@ -1,0 +1,26 @@
+{
+  "source_name": "sales_executive.txt",
+  "parsed_at": 1784385246.3539455,
+  "role_title_raw": "Sales Executive",
+  "role_category": "Sales",
+  "required_skills": [
+    "CRM Software",
+    "Cold Calling",
+    "Communication Skills",
+    "Excel",
+    "Lead Generation",
+    "Negotiation",
+    "Salesforce"
+  ],
+  "experience_requirement": {
+    "min_years": 0,
+    "max_years": 1,
+    "raw_match": "0-1 years"
+  },
+  "education_requirements": [
+    "any graduate"
+  ],
+  "char_count": 496,
+  "cleaned_text": "Job Title: Sales Executive\n\nAbout the Role:\nWe are looking for an energetic Sales Executive to drive lead generation and\nclose deals for our B2B hiring platform.\n\nRequirements:\n- Freshers welcome; 0-1 years of experience preferred\n- Excellent communication and negotiation skills\n- Comfortable with cold calling and CRM software (Salesforce experience a plus)\n- Working knowledge of MS Excel\n\nEducation:\n- Any Graduate\n\nNice to have:\n- Prior internship experience in sales or business development",
+  "output_path": null
+}

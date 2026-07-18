@@ -1,9 +1,15 @@
-=== Resume Text Extraction Engine - Test Run @ Fri Jul 17 17:56:09 2026 ===
+=== JD Parsing System - Test Run @ Sat Jul 18 20:04:06 2026 ===
 
-[PASS] priya_sharma_resume.pdf
-  chars_extracted: 861
+[PASS] mern_stack_developer.txt
+  role_category: Software Engineer - Full Stack
+  required_skills: ['AWS', 'CI/CD', 'Communication Skills', 'Docker', 'Express.js', 'Git', 'MERN Stack', 'MongoDB', 'Node.js', 'REST API', 'React', 'TypeScript']
 
-[PASS] rahul_verma_resume.docx
-  chars_extracted: 661
+[PASS] sales_executive.txt
+  role_category: Sales
+  required_skills: ['CRM Software', 'Cold Calling', 'Communication Skills', 'Excel', 'Lead Generation', 'Negotiation', 'Salesforce']
 
-=== Summary: 2/2 passed ===
+[PASS] ui_ux_designer.txt
+  role_category: Design - UI/UX
+  required_skills: ['Adobe XD', 'Communication Skills', 'Figma', 'Prototyping', 'UI/UX Design', 'Wireframing']
+
+=== Summary: 3/3 passed ===

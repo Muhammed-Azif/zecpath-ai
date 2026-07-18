@@ -1,0 +1,26 @@
+{
+  "source_name": "ui_ux_designer.txt",
+  "parsed_at": 1784385246.3663192,
+  "role_title_raw": "UI/UX Designer",
+  "role_category": "Design - UI/UX",
+  "required_skills": [
+    "Adobe XD",
+    "Communication Skills",
+    "Figma",
+    "Prototyping",
+    "UI/UX Design",
+    "Wireframing"
+  ],
+  "experience_requirement": {
+    "min_years": 3,
+    "max_years": null,
+    "raw_match": "Minimum 3 years"
+  },
+  "education_requirements": [
+    "any graduate",
+    "be"
+  ],
+  "char_count": 626,
+  "cleaned_text": "Job Title: UI/UX Designer\n\nAbout the Role:\nWe're hiring a UI/UX Designer to craft intuitive, accessible interfaces for\nour candidate and recruiter-facing products.\n\nRequirements:\n- Minimum 3 years of experience in UI/UX design for web or mobile products\n- Proficiency in Figma and Adobe XD\n- Strong wireframing and prototyping skills\n- Solid understanding of user experience design principles\n- Excellent communication skills to collaborate with product and engineering\n\nEducation:\n- Any Graduate; a degree in Design, HCI, or a related field is a plus\n\nNice to have:\n- Experience conducting user research and usability testing",
+  "output_path": null
+}

@@ -1,0 +1,19 @@
+Job Title: MERN Stack Developer
+
+About the Role:
+We are looking for a MERN Stack Developer to join our engineering team and
+help build scalable web applications for our hiring platform.
+
+Requirements:
+- 2-4 years of experience in full stack web development
+- Strong hands-on experience with React.js, Node.js, Express.js and MongoDB
+- Familiarity with REST API design and Git version control
+- Working knowledge of Docker is a plus
+- Good communication skills
+
+Education:
+- B.Tech / B.E. in Computer Science or a related field
+
+Nice to have:
+- Experience with TypeScript and CI/CD pipelines
+- Exposure to AWS

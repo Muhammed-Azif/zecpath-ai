@@ -1,0 +1,32 @@
+{
+  "source_name": "mern_stack_developer.txt",
+  "parsed_at": 1784385246.3405259,
+  "role_title_raw": "MERN Stack Developer",
+  "role_category": "Software Engineer - Full Stack",
+  "required_skills": [
+    "AWS",
+    "CI/CD",
+    "Communication Skills",
+    "Docker",
+    "Express.js",
+    "Git",
+    "MERN Stack",
+    "MongoDB",
+    "Node.js",
+    "REST API",
+    "React",
+    "TypeScript"
+  ],
+  "experience_requirement": {
+    "min_years": 2,
+    "max_years": 4,
+    "raw_match": "2-4 years"
+  },
+  "education_requirements": [
+    "b.e.",
+    "b.tech"
+  ],
+  "char_count": 608,
+  "cleaned_text": "Job Title: MERN Stack Developer\n\nAbout the Role:\nWe are looking for a MERN Stack Developer to join our engineering team and\nhelp build scalable web applications for our hiring platform.\n\nRequirements:\n- 2-4 years of experience in full stack web development\n- Strong hands-on experience with React.js, Node.js, Express.js and MongoDB\n- Familiarity with REST API design and Git version control\n- Working knowledge of Docker is a plus\n- Good communication skills\n\nEducation:\n- B.Tech / B.E. in Computer Science or a related field\n\nNice to have:\n- Experience with TypeScript and CI/CD pipelines\n- Exposure to AWS",
+  "output_path": null
+}
