@@ -1,0 +1,20 @@
+{
+  "source_name": "rahul_verma_resume.docx",
+  "segmented_at": 1784915977.5367076,
+  "sections_found": [
+    "Certifications",
+    "Education",
+    "Header",
+    "Skills",
+    "Summary",
+    "Work Experience"
+  ],
+  "sections": {
+    "Header": "Rahul Verma\nrahul.verma@example.com | +91-9123456780 | Pune, India",
+    "Summary": "Frontend developer with 3 years of experience in React and TypeScript, seeking a role building accessible, high-performance web applications.",
+    "Skills": "- React - TypeScript - Redux - Tailwind CSS - Jest",
+    "Work Experience": "Frontend Developer, Bluepeak Digital (2022 - Present)\n- Rebuilt the design system used across 6 internal products\n- Improved Lighthouse performance score from 61 to 94",
+    "Education": "B.E. in Information Technology, Pune Institute of Technology, 2021",
+    "Certifications": "[TABLE]\nMeta Front-End Developer Certificate | 2023\nGoogle UX Design Certificate | 2022"
+  }
+}

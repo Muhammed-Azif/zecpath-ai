@@ -1,15 +1,9 @@
-=== JD Parsing System - Test Run @ Sat Jul 18 20:04:06 2026 ===
+=== Resume Section Segmentation - Test Run @ Fri Jul 24 23:29:37 2026 ===
 
-[PASS] mern_stack_developer.txt
-  role_category: Software Engineer - Full Stack
-  required_skills: ['AWS', 'CI/CD', 'Communication Skills', 'Docker', 'Express.js', 'Git', 'MERN Stack', 'MongoDB', 'Node.js', 'REST API', 'React', 'TypeScript']
+[PASS] priya_sharma_resume.pdf
+  sections_found: ['Certifications', 'Education', 'Header', 'Skills', 'Summary', 'Work Experience']
 
-[PASS] sales_executive.txt
-  role_category: Sales
-  required_skills: ['CRM Software', 'Cold Calling', 'Communication Skills', 'Excel', 'Lead Generation', 'Negotiation', 'Salesforce']
+[PASS] rahul_verma_resume.docx
+  sections_found: ['Certifications', 'Education', 'Header', 'Skills', 'Summary', 'Work Experience']
 
-[PASS] ui_ux_designer.txt
-  role_category: Design - UI/UX
-  required_skills: ['Adobe XD', 'Communication Skills', 'Figma', 'Prototyping', 'UI/UX Design', 'Wireframing']
-
-=== Summary: 3/3 passed ===
+=== Summary: 2/2 passed (100.0% section detection accuracy) ===

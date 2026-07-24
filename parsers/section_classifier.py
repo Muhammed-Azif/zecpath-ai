@@ -25,6 +25,7 @@ import os
 import re
 import sys
 import time
+from parsers.nlp_section_classifier import predict_section
 from pathlib import Path
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
@@ -129,6 +130,11 @@ class ResumeSectionClassifier:
         for line in lines:
             if self._looks_like_heading(line):
                 matched = self._match_heading(line)
+
+                if not matched:
+                    matched = predict_section(line)
+
+
                 if matched:
                     current_section = matched
                     sections.setdefault(current_section, [])
