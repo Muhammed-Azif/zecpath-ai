@@ -1,0 +1,121 @@
+{
+    "document": "day9_sample_resume",
+    "skills": [
+        {
+            "skill": "UI Design",
+            "category": "creative",
+            "confidence": 1.0,
+            "detection_methods": [
+                "exact_match",
+                "nlp_match"
+            ]
+        },
+        {
+            "skill": "Scrum",
+            "category": "business",
+            "confidence": 1.0,
+            "detection_methods": [
+                "exact_match",
+                "nlp_match"
+            ]
+        },
+        {
+            "skill": "Python",
+            "category": "technical",
+            "confidence": 1.0,
+            "detection_methods": [
+                "exact_match",
+                "nlp_match"
+            ]
+        },
+        {
+            "skill": "Leadership",
+            "category": "business",
+            "confidence": 1.0,
+            "detection_methods": [
+                "exact_match",
+                "nlp_match"
+            ]
+        },
+        {
+            "skill": "Agile",
+            "category": "business",
+            "confidence": 1.0,
+            "detection_methods": [
+                "exact_match",
+                "nlp_match"
+            ]
+        },
+        {
+            "skill": "Project Management",
+            "category": "business",
+            "confidence": 1.0,
+            "detection_methods": [
+                "exact_match",
+                "nlp_match"
+            ]
+        },
+        {
+            "skill": "Canva",
+            "category": "creative",
+            "confidence": 1.0,
+            "detection_methods": [
+                "exact_match",
+                "nlp_match"
+            ]
+        },
+        {
+            "skill": "JavaScript",
+            "category": "technical",
+            "confidence": 1.0,
+            "detection_methods": [
+                "exact_match",
+                "nlp_match",
+                "synonym_match"
+            ]
+        },
+        {
+            "skill": "Figma",
+            "category": "creative",
+            "confidence": 1.0,
+            "detection_methods": [
+                "exact_match",
+                "nlp_match"
+            ]
+        },
+        {
+            "skill": "React",
+            "category": "technical",
+            "confidence": 0.95,
+            "detection_methods": [
+                "skill_stack",
+                "synonym_match"
+            ]
+        },
+        {
+            "skill": "MongoDB",
+            "category": "technical",
+            "confidence": 0.95,
+            "detection_methods": [
+                "skill_stack"
+            ]
+        },
+        {
+            "skill": "Express.js",
+            "category": "technical",
+            "confidence": 0.95,
+            "detection_methods": [
+                "skill_stack"
+            ]
+        },
+        {
+            "skill": "Node.js",
+            "category": "technical",
+            "confidence": 0.95,
+            "detection_methods": [
+                "skill_stack"
+            ]
+        }
+    ],
+    "total_skills": 13
+}
