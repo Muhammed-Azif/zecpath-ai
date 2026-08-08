@@ -1,0 +1,156 @@
+[
+    {
+        "id": "TECH-001",
+        "category": "tech",
+        "profile": "fresher",
+        "role": "Software Engineer",
+        "resume_skills": [
+            "Python",
+            "FastAPI",
+            "SQL",
+            "Git"
+        ],
+        "required_skills": [
+            "Python",
+            "FastAPI",
+            "SQL"
+        ],
+        "experience_years": 0,
+        "expected_shortlist": true
+    },
+    {
+        "id": "TECH-002",
+        "category": "tech",
+        "profile": "senior",
+        "role": "Senior Software Engineer",
+        "resume_skills": [
+            "Python",
+            "FastAPI",
+            "Django",
+            "SQL",
+            "Docker",
+            "AWS",
+            "Git"
+        ],
+        "required_skills": [
+            "Python",
+            "FastAPI",
+            "SQL",
+            "Docker"
+        ],
+        "experience_years": 6,
+        "expected_shortlist": true
+    },
+    {
+        "id": "TECH-003",
+        "category": "tech",
+        "profile": "fresher",
+        "role": "Machine Learning Engineer",
+        "resume_skills": [
+            "Python",
+            "Pandas",
+            "NumPy",
+            "Machine Learning"
+        ],
+        "required_skills": [
+            "Python",
+            "Machine Learning",
+            "SQL"
+        ],
+        "experience_years": 0,
+        "expected_shortlist": false
+    },
+    {
+        "id": "NONTECH-001",
+        "category": "non-tech",
+        "profile": "senior",
+        "role": "Sales Manager",
+        "resume_skills": [
+            "Sales",
+            "Negotiation",
+            "Team Management",
+            "Customer Relationship"
+        ],
+        "required_skills": [
+            "Sales",
+            "Negotiation",
+            "Team Management"
+        ],
+        "experience_years": 7,
+        "expected_shortlist": true
+    },
+    {
+        "id": "NONTECH-002",
+        "category": "non-tech",
+        "profile": "fresher",
+        "role": "Sales Executive",
+        "resume_skills": [
+            "Communication",
+            "Customer Service"
+        ],
+        "required_skills": [
+            "Sales",
+            "Negotiation"
+        ],
+        "experience_years": 0,
+        "expected_shortlist": false
+    },
+    {
+        "id": "FRESHER-001",
+        "category": "tech",
+        "profile": "fresher",
+        "role": "Junior Python Developer",
+        "resume_skills": [
+            "Python",
+            "Git",
+            "SQL"
+        ],
+        "required_skills": [
+            "Python",
+            "Git",
+            "SQL"
+        ],
+        "experience_years": 0,
+        "expected_shortlist": true
+    },
+    {
+        "id": "SENIOR-001",
+        "category": "tech",
+        "profile": "senior",
+        "role": "Senior Backend Engineer",
+        "resume_skills": [
+            "Python",
+            "FastAPI",
+            "PostgreSQL",
+            "Docker",
+            "AWS",
+            "Microservices"
+        ],
+        "required_skills": [
+            "Python",
+            "FastAPI",
+            "Docker",
+            "AWS"
+        ],
+        "experience_years": 8,
+        "expected_shortlist": true
+    },
+    {
+        "id": "MISMATCH-001",
+        "category": "tech",
+        "profile": "senior",
+        "role": "Senior Python Developer",
+        "resume_skills": [
+            "Java",
+            "Spring Boot",
+            "MySQL"
+        ],
+        "required_skills": [
+            "Python",
+            "FastAPI",
+            "Docker"
+        ],
+        "experience_years": 8,
+        "expected_shortlist": false
+    }
+]
