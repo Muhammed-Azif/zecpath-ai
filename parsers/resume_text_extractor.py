@@ -16,6 +16,7 @@ Supported inputs: .pdf, .docx
 
 import json
 import os
+import logging
 import sys
 import time
 from pathlib import Path
@@ -25,7 +26,12 @@ import pdfplumber
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 from utils.text_cleaner import clean_text, normalize_text  # noqa: E402
-
+from utils.performance_monitor import measure_time
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s | %(levelname)s | %(message)s"
+)
+logger = logging.getLogger(__name__)
 
 SUPPORTED_EXTENSIONS = {".pdf", ".docx"}
 
@@ -38,7 +44,7 @@ class ResumeTextExtractor:
     """Extracts and normalizes text from PDF or DOCX resumes."""
 
     # ---- PDF ----------------------------------------------------------
-
+    @measure_time("pdf_text_extraction")
     def _extract_pdf(self, file_path: str) -> str:
         """
         Extract text from a PDF, handling multi-column layouts and tables.
@@ -91,7 +97,7 @@ class ResumeTextExtractor:
         return "\n\n".join(t for t in page_texts if t and t.strip())
 
     # ---- DOCX -----------------------------------------------------------
-
+    @measure_time("docx_text_extraction")
     def _extract_docx(self, file_path: str) -> str:
         """
         Extract text from a DOCX, preserving paragraph order and pulling
@@ -136,6 +142,7 @@ class ResumeTextExtractor:
                 f"Unsupported file type '{ext}'. Supported: {sorted(SUPPORTED_EXTENSIONS)}"
             )
 
+    @measure_time("complete_resume_processing")
     def extract_and_process(self, file_path: str, output_dir: str = None) -> dict:
         """
         Full pipeline: extract -> clean -> normalize -> (optionally) persist.
@@ -155,9 +162,24 @@ class ResumeTextExtractor:
             raise FileNotFoundError(file_path)
 
         raw = self.extract_raw_text(file_path)
-        cleaned = clean_text(raw)
-        normalized = normalize_text(cleaned)
 
+        clean_start = time.perf_counter()
+        cleaned = clean_text(raw)
+        clean_elapsed = time.perf_counter() - clean_start
+
+        logger.info(
+            "Performance | text_cleaning | %.4f seconds",
+            clean_elapsed
+        )
+
+        normalize_start = time.perf_counter()
+        normalized = normalize_text(cleaned)
+        normalize_elapsed = time.perf_counter() - normalize_start
+
+        logger.info(
+            "Performance | text_normalization | %.4f seconds",
+            normalize_elapsed
+        )
         result = {
             "source_file": os.path.basename(file_path),
             "file_type": Path(file_path).suffix.lower().lstrip("."),

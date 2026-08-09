@@ -1,13 +1,17 @@
 """
 Day 12 - Real Resume <-> Job Description Semantic Matching
 
-Connects:
-Day 5  -> ResumeTextExtractor
-Day 6  -> JobDescriptionParser
-Day 9  -> SkillExtractor
-Day 10 -> ExperienceParser
-Day 12 -> SemanticMatcher + SimilarityScorer
+Day 18 performance enhancements:
+- Cache repeated embeddings
+- Avoid duplicate JD embedding generation
+- Avoid duplicate resume embedding generation
+- Measure semantic matching time
+- Preserve existing scoring behavior and API
 """
+
+import logging
+import time
+from functools import lru_cache
 
 from parsers.resume_text_extractor import ResumeTextExtractor
 from parsers.jd_parser import JobDescriptionParser
@@ -16,6 +20,9 @@ from parsers.experience_parser import ExperienceParser
 
 from semantic_matching.semantic_matcher import SemanticMatcher
 from semantic_matching.similarity_scorer import SimilarityScorer
+
+
+logger = logging.getLogger(__name__)
 
 
 class ResumeJobMatcher:
@@ -33,6 +40,24 @@ class ResumeJobMatcher:
         self.scorer = SimilarityScorer()
 
         print("Semantic Matching Engine Ready.")
+
+    # ---------------------------------------------------------
+    # EMBEDDING CACHE
+    # ---------------------------------------------------------
+
+    @lru_cache(maxsize=128)
+    def _create_cached_embedding(self, text):
+        """
+        Create an embedding and cache repeated requests.
+
+        This prevents the same text from being embedded multiple
+        times during a single matching operation.
+        """
+
+        if not text:
+            return None
+
+        return self.semantic_matcher.create_embedding(text)
 
     # ---------------------------------------------------------
     # RESUME PROCESSING
@@ -64,16 +89,18 @@ class ResumeJobMatcher:
         )
 
         # Create semantic experience representation
-        experience_text = ""
+        experience_parts = []
 
         for experience in experiences:
 
-            experience_text += (
+            experience_parts.append(
                 f"{experience['job_title']} "
                 f"at {experience['company']}. "
                 f"Experience duration: "
-                f"{experience['duration_months']} months. "
+                f"{experience['duration_months']} months."
             )
+
+        experience_text = " ".join(experience_parts)
 
         # Fallback if experience parser doesn't find
         # structured jobs.
@@ -115,6 +142,8 @@ class ResumeJobMatcher:
 
         print("\nCalculating semantic similarity...")
 
+        start_time = time.perf_counter()
+
         # =====================================================
         # SKILLS
         # =====================================================
@@ -127,19 +156,18 @@ class ResumeJobMatcher:
             jd_data["required_skills"]
         )
 
-        # If the parser finds no skills, use the complete JD
-        # as a fallback representation.
+        # If parser finds no skills, use complete JD.
         if not jd_skills_text:
             jd_skills_text = jd_data["cleaned_text"]
 
         resume_skill_embedding = (
-            self.semantic_matcher.create_embedding(
+            self._create_cached_embedding(
                 resume_skills_text
             )
         )
 
         jd_skill_embedding = (
-            self.semantic_matcher.create_embedding(
+            self._create_cached_embedding(
                 jd_skills_text
             )
         )
@@ -154,22 +182,21 @@ class ResumeJobMatcher:
         # =====================================================
 
         resume_experience_embedding = (
-            self.semantic_matcher.create_embedding(
+            self._create_cached_embedding(
                 resume_data["experience_text"]
             )
         )
 
-        # Use complete JD because it contains responsibilities,
-        # requirements and role context.
-        jd_experience_embedding = (
-            self.semantic_matcher.create_embedding(
+        # Create this embedding only once.
+        jd_full_embedding = (
+            self._create_cached_embedding(
                 jd_data["cleaned_text"]
             )
         )
 
         experience_score = self.scorer.calculate_similarity(
             resume_experience_embedding,
-            jd_experience_embedding
+            jd_full_embedding
         )
 
         # =====================================================
@@ -177,20 +204,15 @@ class ResumeJobMatcher:
         # =====================================================
 
         resume_project_embedding = (
-            self.semantic_matcher.create_embedding(
+            self._create_cached_embedding(
                 resume_data["projects_text"]
             )
         )
 
-        jd_project_embedding = (
-            self.semantic_matcher.create_embedding(
-                jd_data["cleaned_text"]
-            )
-        )
-
+        # Reuse the already-created JD embedding.
         projects_score = self.scorer.calculate_similarity(
             resume_project_embedding,
-            jd_project_embedding
+            jd_full_embedding
         )
 
         # =====================================================
@@ -223,6 +245,13 @@ class ResumeJobMatcher:
             final_percentage
         )
 
+        elapsed = time.perf_counter() - start_time
+
+        logger.info(
+            "Performance | semantic_similarity | %.4f seconds",
+            elapsed
+        )
+
         return {
             "skills_score": skills_percentage,
             "experience_score": experience_percentage,
@@ -241,6 +270,8 @@ class ResumeJobMatcher:
         jd_text
     ):
 
+        start_time = time.perf_counter()
+
         resume_data = self.extract_resume_data(
             resume_path
         )
@@ -252,6 +283,13 @@ class ResumeJobMatcher:
         scores = self.calculate_similarity(
             resume_data,
             jd_data
+        )
+
+        elapsed = time.perf_counter() - start_time
+
+        logger.info(
+            "Performance | complete_resume_job_matching | %.4f seconds",
+            elapsed
         )
 
         return {
