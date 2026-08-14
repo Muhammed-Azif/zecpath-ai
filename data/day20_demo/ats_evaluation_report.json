@@ -1,0 +1,39 @@
+{
+  "project": "Zecpath AI",
+  "report_type": "ATS Evaluation Report",
+  "total_candidates": 2,
+  "shortlisted": 2,
+  "rejected": 0,
+  "candidates": [
+    {
+      "candidate_id": "cand_001",
+      "candidate_name": "Priya Sharma",
+      "job_id": "job_001",
+      "role": "AI/ML Engineer",
+      "final_score": 86.2,
+      "classification": "Excellent",
+      "decision": "SHORTLIST",
+      "score_breakdown": {
+        "skills": 35.2,
+        "experience": 20.5,
+        "education": 9.0,
+        "semantic": 21.5
+      }
+    },
+    {
+      "candidate_id": "cand_002",
+      "candidate_name": "Rahul Verma",
+      "job_id": "job_001",
+      "role": "AI/ML Engineer",
+      "final_score": 72.95,
+      "classification": "Good",
+      "decision": "SHORTLIST",
+      "score_breakdown": {
+        "skills": 28.8,
+        "experience": 17.0,
+        "education": 8.4,
+        "semantic": 18.75
+      }
+    }
+  ]
+}

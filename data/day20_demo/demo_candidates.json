@@ -1,0 +1,24 @@
+[
+    {
+        "candidate_id": "cand_001",
+        "candidate_name": "Priya Sharma",
+        "resume_file": "priya_sharma_resume.pdf",
+        "job_id": "job_001",
+        "role": "AI/ML Engineer",
+        "skills_score": 88,
+        "experience_score": 82,
+        "education_score": 90,
+        "semantic_score": 86
+    },
+    {
+        "candidate_id": "cand_002",
+        "candidate_name": "Rahul Verma",
+        "resume_file": "rahul_verma_resume.docx",
+        "job_id": "job_001",
+        "role": "AI/ML Engineer",
+        "skills_score": 72,
+        "experience_score": 68,
+        "education_score": 84,
+        "semantic_score": 75
+    }
+]

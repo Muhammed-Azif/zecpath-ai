@@ -1,0 +1,16 @@
+[
+    {
+        "job_id": "job_001",
+        "role": "AI/ML Engineer",
+        "company": "Zecpath AI",
+        "required_skills": [
+            "Python",
+            "Machine Learning",
+            "NLP",
+            "SQL",
+            "Git"
+        ],
+        "minimum_experience_years": 1,
+        "education": "B.Tech / B.E / equivalent"
+    }
+]
