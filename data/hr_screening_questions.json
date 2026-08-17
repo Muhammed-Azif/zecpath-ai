@@ -1,0 +1,187 @@
+{
+  "dataset_name": "Zecpath AI HR Screening Question Bank",
+  "version": "1.0",
+  "language": "en",
+  "questions": [
+    {
+      "question_id": "HR_INTRO_001",
+      "category": "Introduction",
+      "question": "Can you briefly introduce yourself?",
+      "expected_answer_type": "text",
+      "mandatory": true,
+      "scoring_importance": 3,
+      "roles": ["All"]
+    },
+    {
+      "question_id": "HR_INTRO_002",
+      "category": "Introduction",
+      "question": "What interests you about this position?",
+      "expected_answer_type": "text",
+      "mandatory": true,
+      "scoring_importance": 4,
+      "roles": ["All"]
+    },
+    {
+      "question_id": "HR_EDU_001",
+      "category": "Education",
+      "question": "What is your highest level of education?",
+      "expected_answer_type": "text",
+      "mandatory": true,
+      "scoring_importance": 3,
+      "roles": ["All"]
+    },
+    {
+      "question_id": "HR_EDU_002",
+      "category": "Education",
+      "question": "How does your educational background relate to this role?",
+      "expected_answer_type": "text",
+      "mandatory": false,
+      "scoring_importance": 3,
+      "roles": ["All"]
+    },
+    {
+      "question_id": "HR_EXP_001",
+      "category": "Experience",
+      "question": "How many years of relevant work experience do you have?",
+      "expected_answer_type": "number",
+      "mandatory": true,
+      "scoring_importance": 5,
+      "roles": ["All"]
+    },
+    {
+      "question_id": "HR_EXP_002",
+      "category": "Experience",
+      "question": "Can you describe your most recent work experience?",
+      "expected_answer_type": "text",
+      "mandatory": true,
+      "scoring_importance": 4,
+      "roles": ["All"]
+    },
+    {
+      "question_id": "HR_EXP_003",
+      "category": "Experience",
+      "question": "Why are you looking for a new opportunity?",
+      "expected_answer_type": "text",
+      "mandatory": false,
+      "scoring_importance": 3,
+      "roles": ["All"]
+    },
+    {
+      "question_id": "HR_SKILL_001",
+      "category": "Skills",
+      "question": "What are your strongest technical or professional skills?",
+      "expected_answer_type": "list",
+      "mandatory": true,
+      "scoring_importance": 5,
+      "roles": ["All"]
+    },
+    {
+      "question_id": "HR_SKILL_002",
+      "category": "Skills",
+      "question": "Which skills do you think are most relevant to this position?",
+      "expected_answer_type": "list",
+      "mandatory": true,
+      "scoring_importance": 5,
+      "roles": ["All"]
+    },
+    {
+      "question_id": "HR_SKILL_003",
+      "category": "Skills",
+      "question": "How do you keep your professional skills up to date?",
+      "expected_answer_type": "text",
+      "mandatory": false,
+      "scoring_importance": 3,
+      "roles": ["All"]
+    },
+    {
+      "question_id": "HR_LOCATION_001",
+      "category": "Location",
+      "question": "Where are you currently located?",
+      "expected_answer_type": "location",
+      "mandatory": true,
+      "scoring_importance": 4,
+      "roles": ["All"]
+    },
+    {
+      "question_id": "HR_LOCATION_002",
+      "category": "Location",
+      "question": "Are you willing to relocate if the position requires it?",
+      "expected_answer_type": "boolean",
+      "mandatory": false,
+      "scoring_importance": 3,
+      "roles": ["All"]
+    },
+    {
+      "question_id": "HR_LOCATION_003",
+      "category": "Location",
+      "question": "Are you comfortable working remotely or in a hybrid setup?",
+      "expected_answer_type": "boolean",
+      "mandatory": false,
+      "scoring_importance": 2,
+      "roles": ["All"]
+    },
+    {
+      "question_id": "HR_SALARY_001",
+      "category": "Salary",
+      "question": "What are your salary expectations for this role?",
+      "expected_answer_type": "salary",
+      "mandatory": true,
+      "scoring_importance": 4,
+      "roles": ["All"]
+    },
+    {
+      "question_id": "HR_SALARY_002",
+      "category": "Salary",
+      "question": "Are you flexible regarding the compensation package?",
+      "expected_answer_type": "boolean",
+      "mandatory": false,
+      "scoring_importance": 2,
+      "roles": ["All"]
+    },
+    {
+      "question_id": "HR_NOTICE_001",
+      "category": "Notice Period",
+      "question": "What is your current notice period?",
+      "expected_answer_type": "duration",
+      "mandatory": true,
+      "scoring_importance": 5,
+      "roles": ["All"]
+    },
+    {
+      "question_id": "HR_NOTICE_002",
+      "category": "Notice Period",
+      "question": "When would you be available to start?",
+      "expected_answer_type": "date",
+      "mandatory": true,
+      "scoring_importance": 4,
+      "roles": ["All"]
+    },
+    {
+      "question_id": "HR_AI_001",
+      "category": "Skills",
+      "question": "Which AI or machine learning technologies have you worked with?",
+      "expected_answer_type": "list",
+      "mandatory": false,
+      "scoring_importance": 5,
+      "roles": ["AI/ML Engineer", "Data Scientist"]
+    },
+    {
+      "question_id": "HR_AI_002",
+      "category": "Experience",
+      "question": "Can you describe an AI or machine learning project you have worked on?",
+      "expected_answer_type": "text",
+      "mandatory": false,
+      "scoring_importance": 5,
+      "roles": ["AI/ML Engineer", "Data Scientist"]
+    },
+    {
+      "question_id": "HR_FINAL_001",
+      "category": "Introduction",
+      "question": "Why do you believe you are a good fit for this role?",
+      "expected_answer_type": "text",
+      "mandatory": true,
+      "scoring_importance": 5,
+      "roles": ["All"]
+    }
+  ]
+}
