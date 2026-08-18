@@ -1,0 +1,14 @@
+{
+  "interaction_id": "interaction_001",
+  "transcript_id": "transcript_001",
+  "candidate_id": "cand_001",
+  "job_id": "job_001",
+  "question_id": "q_001",
+  "question_text": "Tell me about your experience with Python?",
+  "response_text": "I have experience using Python for machine learning and data processing.",
+  "timestamp": 5.2,
+  "confidence": 0.96,
+  "response_duration_seconds": 16.4,
+  "created_at": "2026-08-18T10:30:00",
+  "status": "completed"
+}

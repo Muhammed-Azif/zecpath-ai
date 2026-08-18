@@ -1,0 +1,50 @@
+{
+  "transcript_id": "transcript_001",
+  "candidate_id": "cand_001",
+  "job_id": "job_001",
+  "created_at": "2026-08-18T10:30:00",
+  "language": "en",
+  "duration_seconds": 185.5,
+  "segments": [
+    {
+      "speaker": "interviewer",
+      "text": "Tell me about your experience with Python.",
+      "timestamp": 5.2,
+      "confidence": 0.98
+    },
+    {
+      "speaker": "candidate",
+      "text": "I have experience using Python for machine learning and data processing.",
+      "timestamp": 12.7,
+      "confidence": 0.96
+    },
+    {
+      "speaker": "interviewer",
+      "text": "Have you worked with machine learning models?",
+      "timestamp": 28.4,
+      "confidence": 0.99
+    },
+    {
+      "speaker": "candidate",
+      "text": "Yes, I have worked with classification and regression models.",
+      "timestamp": 35.1,
+      "confidence": 0.95
+    }
+  ],
+  "interactions": [
+    {
+      "question_id": "q_001",
+      "question_text": "Tell me about your experience with Python.",
+      "response_text": "I have experience using Python for machine learning and data processing.",
+      "timestamp": 5.2,
+      "confidence": 0.96
+    },
+    {
+      "question_id": "q_002",
+      "question_text": "Have you worked with machine learning models?",
+      "response_text": "Yes, I have worked with classification and regression models.",
+      "timestamp": 28.4,
+      "confidence": 0.95
+    }
+  ]
+}
