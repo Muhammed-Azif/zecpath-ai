@@ -1,212 +1,152 @@
-# Day 15 – Fairness, Normalization & Bias Reduction
 
-## Objective
+## Project Progress
 
-Improve fairness, reduce bias, and standardize resume evaluation before final candidate selection.
+### Day 22 — HR Screening Question Dataset ✅
 
-This module ensures that every resume is evaluated using only job-related information while removing personal attributes that could introduce bias into the recruitment process.
+Implemented the initial HR screening question dataset for structured
+candidate screening.
 
----
-
-## Features
-
-### 1. Resume Normalization
-- Standardizes resume text formatting
-- Removes unnecessary whitespace
-- Creates consistent input for downstream AI modules
-
-### 2. Bias Detection & Masking
-Automatically removes or masks sensitive personal information such as:
-- Email address
-- Phone number
-- Gender
-- Age
-- Marital status
-
-This ensures candidate evaluation is based only on qualifications and skills.
-
-### 3. Score Normalization
-Normalizes ATS scores to a valid range (0–100).
-
-Example:
-
-Input: 108.4
-
-Output: 100
-
-Input: -12
-
-Output: 0
+**Completed:**
+- HR screening question dataset
+- Structured question identifiers
+- Candidate/job mapping
+- Screening question categories
+- Dataset validation
 
 ---
 
-## Project Structure
+### Day 23 — Transcript Data Architecture ✅
 
-```
-screening_ai/
-│
-├── bias_detector.py
-├── fairness_engine.py
-├── resume_normalizer.py
-├── score_normalizer.py
-└── __init__.py
+Implemented the transcript data architecture required for
+voice-based AI screening.
+
+**Completed:**
+- Voice transcript schema
+- Transcript segments
+- Screening interaction schema
+- Candidate ID and Job ID mapping
+- Question ID mapping
+- Timestamp metadata
+- Speech confidence metadata
+- Transcript metadata standards
+- Sample screening transcript
+- Automated transcript schema tests
+
+**Key files:**
+
+```text
+schemas/
+├── transcript_schema.py
+└── screening_interaction_schema.py
+
+data/transcripts/
+├── sample_screening_transcript.json
+└── screening_interaction_001.json
+
+docs/
+└── transcript_metadata_standards.md
+````
+
+---
+
+### Day 24 — Speech-to-Text Integration & Cleaning ✅
+
+Implemented the speech-to-text processing and transcript
+cleaning layer for AI-based candidate screening.
+
+**Completed:**
+
+* Speech-to-text service interface
+* STT provider abstraction
+* Transcript normalization
+* Filler word removal
+* Punctuation normalization
+* Case normalization
+* Interrupted speech handling
+* Partial answer handling
+* Silence detection
+* Clean transcript processor
+* STT accuracy test cases
+* Word Error Rate (WER) evaluation
+* STT accuracy test report
+* Automated transcript processing tests
+
+**Key files:**
+
+```text
+parsers/
+└── stt_service.py
+
+processors/
+└── clean_transcript_processor.py
+
+utils/
+└── transcript_normalizer.py
+
+data/
+└── stt_accuracy_test_cases.json
+
+docs/
+└── stt_accuracy_test_report.md
 
 tests/
-└── test_fairness.py
+├── test_transcript_processing.py
+└── stt_accuracy_evaluator.py
 ```
 
----
+### Day 24 Processing Pipeline
 
-## Workflow
-
-```
-Resume
-    │
-    ▼
-Resume Normalizer
-    │
-    ▼
-Bias Detector
-    │
-    ▼
-Personal Information Masking
-    │
-    ▼
-ATS Score Normalizer
-    │
-    ▼
-Fair Resume + Normalized Score
-```
-
----
-
-## Files
-
-### resume_normalizer.py
-Standardizes resume formatting before processing.
-
-### bias_detector.py
-Masks personal information using regular expressions.
-
-### score_normalizer.py
-Ensures ATS scores remain within the valid range.
-
-### fairness_engine.py
-Integrates all fairness components into one processing pipeline.
-
-### test_fairness.py
-Demonstrates the fairness pipeline using a sample resume.
-
----
-
-## How to Run
-
-Activate the virtual environment.
-
-```
-venv\Scripts\activate
+```text
+Voice Input
+     │
+     ▼
+Speech-to-Text Service
+     │
+     ▼
+Raw Transcript
+     │
+     ▼
+Transcript Normalizer
+     │
+     ├── Filler Removal
+     ├── Case Normalization
+     ├── Punctuation Correction
+     ├── Interrupted Speech Handling
+     ├── Partial Answer Handling
+     └── Silence Detection
+     │
+     ▼
+Clean Transcript Processor
+     │
+     ▼
+Structured Clean Transcript
+     │
+     ▼
+AI Screening / ATS Pipeline
 ```
 
-Run the test:
+### Testing Status
 
-```
-python -m tests.test_fairness
-```
-
----
-
-## Sample Output
-
-```
-==================================================
-ZECPATH FAIRNESS ENGINE
-==================================================
-
-[MASKED]
-[MASKED]
-
-[MASKED]
-
-[MASKED]
-
-Python Developer
-
-Normalized Score : 88.70
-
-Bias Removed : True
+```text
+Day 22 — HR Screening Dataset              ✅
+Day 23 — Transcript Schema                 ✅
+Day 24 — STT Processing & Cleaning         ✅
+Day 24 — Transcript Processing Tests       ✅
+Day 24 — STT Accuracy Evaluation           ✅
 ```
 
----
+### Git Progress
 
-## Deliverables
+```text
+Day 22
+d798334 Day 22: Add HR screening question dataset
 
-✔ Fair scoring improvements
+Day 23
+e5808d7 Day 23: Add transcript data architecture
 
-✔ Resume normalization logic
+Day 24
+131692b Day 24: Add speech-to-text processing and cleaning
+```
 
-✔ Bias reduction module
+**Current Status: Day 24 Complete ✅**
 
-✔ Automated fairness engine
-
-✔ Test script
-
----
-
-## Technologies Used
-
-- Python 3
-- Regular Expressions (re)
-- Object-Oriented Programming
-- Rule-based NLP
-- Modular AI Pipeline
-
----
-
-## Integration
-
-This module works after:
-
-- Day 5 – Resume Text Extraction
-- Day 6 – Job Description Parser
-- Day 7 – Resume Section Classification
-- Day 8 – Education Parser
-- Day 9 – Skill Extraction
-- Day 10 – Experience Parser
-- Day 12 – Semantic Matching
-- Day 13 – ATS Scoring
-- Day 14 – Candidate Ranking
-
-Pipeline:
-
-Resume
-→ Parsing
-→ Skill Extraction
-→ Semantic Matching
-→ ATS Scoring
-→ Candidate Ranking
-→ Fairness Engine
-→ Final Candidate Selection
-
----
-
-## Future Improvements
-
-- AI-based bias detection using NLP models
-- Location and nationality masking
-- Fairness analytics dashboard
-- Explainable AI (XAI) fairness reports
-- Bias score visualization
-- Recruiter fairness audit logs
-
----
-
-## Status
-
-**Day 15 Completed**
-
-All required deliverables have been implemented:
-- Resume normalization
-- Bias detection and masking
-- Score normalization
-- Fairness engine
-- Testing module
