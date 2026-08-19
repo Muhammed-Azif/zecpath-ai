@@ -1,0 +1,51 @@
+
+[
+  {
+    "test_id": "stt_001",
+    "condition": "standard_speech",
+    "reference": "I have three years of experience with Python and machine learning.",
+    "stt_output": "I have three years of experience with Python and machine learning."
+  },
+  {
+    "test_id": "stt_002",
+    "condition": "indian_english_accent",
+    "reference": "I have worked on several machine learning projects.",
+    "stt_output": "I have worked on several machine learning projects."
+  },
+  {
+    "test_id": "stt_003",
+    "condition": "fast_speech",
+    "reference": "I developed a Python application for processing customer data.",
+    "stt_output": "I developed a Python application for processing customer data."
+  },
+  {
+    "test_id": "stt_004",
+    "condition": "background_noise",
+    "reference": "I have experience with SQL and data analysis.",
+    "stt_output": "I have experience with SQL and data analysis."
+  },
+  {
+    "test_id": "stt_005",
+    "condition": "filler_heavy_speech",
+    "reference": "I have experience with Python and artificial intelligence.",
+    "stt_output": "Um, I have, uh, experience with Python and, you know, artificial intelligence."
+  },
+  {
+    "test_id": "stt_006",
+    "condition": "interrupted_speech",
+    "reference": "I worked with Python and Java.",
+    "stt_output": "I worked with Python - actually I worked with Python and Java."
+  },
+  {
+    "test_id": "stt_007",
+    "condition": "partial_answer",
+    "reference": "I have experience with machine learning.",
+    "stt_output": "I have experience with machine learning-"
+  },
+  {
+    "test_id": "stt_008",
+    "condition": "silence",
+    "reference": "",
+    "stt_output": "[silence]"
+  }
+]
