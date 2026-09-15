@@ -476,3 +476,56 @@ Score candidate responses
 Generate per-question score breakdowns
 Generate normalized final screening scores
 Provide explainable screening results
+
+## Day 27 – Confidence & Sentiment Signal Analysis
+
+Implemented a communication signal analysis layer for HR screening answers.
+
+### Features
+
+- Confidence score calculation
+- Confidence level classification
+- Hesitation detection
+- Uncertainty detection
+- Response length analysis
+- Speaking pace estimation
+- Basic contradiction detection
+- Positive/negative/neutral sentiment scoring
+- Behavioral communication indicators
+- Communication strength assessment
+- Behavioral concern detection
+- Automated Day 27 test coverage
+
+### Day 27 Components
+
+- `analysis/confidence_analyzer.py`
+- `analysis/sentiment_scorer.py`
+- `analysis/behavioral_report.py`
+- `tests/test_day27_confidence_sentiment.py`
+- `demo_day27.py`
+
+### Example Analysis
+
+The Day 27 demo analyzes a candidate's screening response and produces:
+
+- Confidence score
+- Confidence level
+- Hesitation count
+- Uncertainty count
+- Speaking pace
+- Sentiment label
+- Sentiment score
+- Communication strength
+- Strength indicators
+- Behavioral concerns
+
+### Day 27 Validation
+
+All automated tests passed successfully.
+
+Example demo result:
+
+- Sentiment: Positive
+- Sentiment Score: 100
+- Communication Strength: Strong
+- Overall Behavioral Score: 88/100
