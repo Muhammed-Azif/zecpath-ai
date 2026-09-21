@@ -1,0 +1,31 @@
+{
+  "candidate_id": "cand_001",
+  "candidate_name": "Priya Sharma",
+  "screening_status": "Review",
+  "key_answers": {
+    "experience": "2 years of experience in Python and machine learning projects",
+    "location": "Trivandrum",
+    "salary_expectation": "₹6 LPA",
+    "availability": "30 days"
+  },
+  "confirmed_skills": [
+    "Python",
+    "Machine Learning",
+    "SQL"
+  ],
+  "salary_expectation": "₹6 LPA",
+  "availability": "30 days",
+  "strengths": [
+    "Relevant Python experience",
+    "Machine learning project exposure",
+    "Clear communication"
+  ],
+  "risks": [
+    "Notice period may require coordination"
+  ],
+  "missing_data": [],
+  "metadata": {
+    "report_version": "1.0",
+    "generator": "Zecpath AI"
+  }
+}
