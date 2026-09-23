@@ -1,531 +1,125 @@
-# Zecpath AI
+## Day 29 – AI Conversation Flow Design
 
-## AI-Powered Resume Screening and Candidate Evaluation System
+### Objective
 
-Zecpath AI is an AI-powered recruitment and candidate screening system designed to automate resume analysis, ATS scoring, candidate eligibility decisions, HR screening, speech-to-text processing, answer understanding, and screening response evaluation.
+Designed the dynamic conversation flow used by Zecpath AI during AI-based screening calls.
 
-The project is being developed incrementally with a modular architecture.
+### Implemented Features
 
----
+* AI conversation state machine
+* Dynamic question flow
+* Silence detection and retry handling
+* Confusion handling and question clarification
+* Repeated-answer detection and question rephrasing
+* Off-topic answer redirection
+* Follow-up question triggers
+* Missing and vague answer handling
+* Configurable retry limits
+* Graceful failure and retry logic
+* Conversation completion handling
+* Automated test coverage
 
-# Features
+### Conversation States
 
-## Resume Processing
+The conversation state machine supports:
 
-- Resume upload and parsing
-- Resume text extraction
-- Structured resume data processing
-- Skill extraction
-- Skill normalization
-- Skill confidence scoring
-- Experience extraction
-- Education extraction
+* START
+* ASKING
+* LISTENING
+* PROCESSING
+* VALID_ANSWER
+* SILENCE
+* CONFUSED
+* REPEATED
+* OFF_TOPIC
+* FOLLOW_UP
+* RETRY
+* COMPLETED
+* FAILED
 
-## Job Description Processing
-
-- Job description parsing
-- Required skill extraction
-- Role-based evaluation
-- Candidate-job matching
-
-## Semantic Matching
-
-- Semantic similarity matching
-- Resume and job description comparison
-- Sentence Transformer integration
-- AI-based candidate relevance evaluation
-
-Model used:
+### Conversation Flow
 
 ```text
-sentence-transformers/all-MiniLM-L6-v2
-
-ATS Scoring Engine
-
-The ATS engine evaluates candidates using multiple factors:
-
-Skills score
-Experience score
-Education score
-Semantic similarity score
-
-Example scoring workflow:
-
-Resume
-   ↓
-Resume Parsing
-   ↓
-Skill Extraction
-   ↓
-Experience Analysis
-   ↓
-Education Analysis
-   ↓
-Semantic Matching
-   ↓
-ATS Score
-
-The ATS engine also provides explainable score breakdowns.
-
-Eligibility Decision Engine
-
-The eligibility engine automatically determines whether a candidate should proceed to AI screening.
-
-Decision factors include:
-
-Minimum ATS score
-Mandatory skills
-Experience requirements
-Location constraints
-Availability constraints
-Role-specific rules
-
-Candidate decisions:
-
-Eligible
-Review
-Rejected
-HR Screening Dataset
-
-Zecpath AI includes an AI-ready HR screening question dataset.
-
-Question categories include:
-
-Introduction
-Education
-Experience
-Skills
-Location
-Salary
-Notice Period
-
-The dataset is designed for automated candidate screening conversations.
-
-Transcript Architecture
-
-The transcript system provides a structured architecture for storing candidate screening conversations.
-
-Example workflow:
-
-Candidate Speech
-       ↓
-Speech-to-Text
-       ↓
-Transcript
-       ↓
-Structured Transcript Data
-
-The transcript architecture supports:
-
-Transcript IDs
-Question IDs
-Candidate responses
-Structured conversation segments
-Transcript validation
-Speech-to-Text and Transcript Processing
-
-The speech processing system handles candidate responses after speech recognition.
-
-Features include:
-
-Speech-to-text integration
-Transcript cleaning
-Filler word removal
-Case normalization
-Punctuation normalization
-Interrupted speech handling
-Partial answer handling
-Silence detection
-Speech accuracy testing
-
-Processing pipeline:
-
-Candidate Speech
-       ↓
-Speech-to-Text
-       ↓
-Raw Transcript
-       ↓
-Transcript Cleaning
-       ↓
-Normalized Candidate Response
-Answer Intent and Understanding Engine
-
-The Answer Understanding Engine enables Zecpath AI to understand what the candidate actually means.
-
-It performs:
-
-Intent classification
-Skill extraction
-Experience extraction
-Availability extraction
-Salary expectation extraction
-Off-topic response detection
-Missing answer detection
-Vague answer detection
-Structured semantic answer generation
-
-Supported intents include:
-
-Skills
-Experience
-Availability
-Salary
-Education
-Location
-Introduction
-Notice Period
-Off-topic
-Unknown
-
-Example structured answer:
-
-{
-    "question_id": "q_skills_001",
-    "intent": "skills",
-    "answer": "I have experience with Python, SQL and machine learning.",
-    "entities": {
-        "skills": [
-            "python",
-            "sql",
-            "machine learning"
-        ]
-    },
-    "quality": "complete",
-    "confidence": 0.95,
-    "off_topic": false
-}
-
-Answer understanding pipeline:
-
-Cleaned Candidate Answer
-          ↓
-Intent Classification
-          ↓
-Information Extraction
-          ↓
-Quality Detection
-          ↓
-Structured Semantic Answer
-Screening Scoring Engine
-
-The Screening Scoring Engine objectively evaluates candidate screening responses.
-
-Each candidate answer is evaluated using four parameters:
-
-Clarity
-
-Measures how clear and understandable the candidate response is.
-
-Relevance
-
-Measures whether the response is relevant to the screening context.
-
-Completeness
-
-Measures whether the candidate provided sufficient information.
-
-Consistency
-
-Measures whether the response is semantically consistent with the extracted information.
-
-Scoring Weights
-Clarity        25%
-Relevance      30%
-Completeness   25%
-Consistency    20%
--------------------
-Total         100%
-Per-Question Scoring
-
-Each candidate response receives an individual score.
-
-Example:
-
-Question
-   ↓
-Clarity Score
-Relevance Score
-Completeness Score
-Consistency Score
-   ↓
-Weighted Question Score
-
-Example score object:
-
-{
-    "question_id": "q_001",
-    "intent": "skills",
-    "scores": {
-        "clarity": 95.0,
-        "relevance": 100.0,
-        "completeness": 100.0,
-        "consistency": 100.0
-    },
-    "weighted_score": 98.75,
-    "quality": "complete",
-    "off_topic": false
-}
-Final Screening Score
-
-All question scores are aggregated into a final screening score.
-
-Candidate Responses
-        ↓
-Per-Question Scoring
-        ↓
-Score Aggregation
-        ↓
-Score Normalization
-        ↓
-Final Screening Score
-        ↓
-Candidate Classification
-
-Score classifications:
-
-85 - 100    Excellent
-70 - 84     Good
-50 - 69     Average
-0 - 49      Needs Improvement
-
-Example final screening result:
-
-{
-    "total_score": 380.5,
-    "normalized_score": 76.1,
-    "classification": "Good",
-    "questions_scored": 5
-}
-
-The engine also provides explainable outputs describing why the candidate received each score.
-
-Complete AI Screening Pipeline
-Resume
-   ↓
-Resume Parsing
-   ↓
-Skill & Experience Extraction
-   ↓
-Semantic Matching
-   ↓
-ATS Scoring
-   ↓
-Eligibility Decision
-   ↓
-HR Screening Questions
-   ↓
-Candidate Speech Response
-   ↓
-Speech-to-Text
-   ↓
-Transcript Cleaning
-   ↓
-Answer Intent & Understanding
-   ↓
-Screening Response Scoring
-   ↓
-Final Screening Score
-Project Structure
-zecpath-ai/
-│
-├── ats_engine/
-│   ├── ats_scorer.py
-│   ├── score_explainer.py
-│   └── weight_config.py
-│
-├── answer_engine/
-│   ├── __init__.py
-│   ├── intent_classifier.py
-│   ├── answer_extractor.py
-│   ├── answer_quality.py
-│   └── answer_understanding.py
-│
-├── screening_engine/
-│   ├── __init__.py
-│   ├── scoring_parameters.py
-│   ├── response_scorer.py
-│   ├── score_normalizer.py
-│   ├── screening_aggregator.py
-│   ├── score_explainer.py
-│   └── screening_engine.py
-│
-├── parsers/
-│
-├── processors/
-│   └── answer_processor.py
-│
-├── semantic_matching/
-│
-├── utils/
-│
-├── data/
-│
-├── tests/
-│   ├── test_transcript_processing.py
-│   ├── test_answer_understanding.py
-│   └── test_screening_scoring.py
-│
-├── demo_ats.py
-├── demo_answer_understanding.py
-├── demo_day25_pipeline.py
-├── demo_screening_scoring.py
-│
-└── README.md
-Installation
-
-Clone the repository:
-
-git clone <repository-url>
-
-Move into the project directory:
-
-cd zecpath-ai
-
-Create a virtual environment:
-
-python -m venv venv
-
-Activate the virtual environment on Windows:
-
-venv\Scripts\activate
-
-Install dependencies:
-
-pip install -r requirements.txt
-Running the Demos
-ATS Demo
-python demo_ats.py
-Answer Understanding Demo
-python demo_answer_understanding.py
-Day 25 Pipeline Demo
-python demo_day25_pipeline.py
-Day 26 Screening Scoring Demo
-python demo_screening_scoring.py
-Running Tests
-
-Run all tests:
-
-pytest -v
-
-Run Day 25 tests:
-
-pytest tests/test_answer_understanding.py -v
-
-Run Day 26 tests:
-
-pytest tests/test_screening_scoring.py -v
-Development Progress
-Day	Feature	Status
-Day 21	Eligibility Decision Engine	Completed
-Day 22	HR Screening Question Dataset	Completed
-Day 23	Transcript Data Architecture	Completed
-Day 24	Speech-to-Text and Transcript Cleaning	Completed
-Day 25	Answer Intent and Understanding Engine	Completed
-Day 26	Screening Scoring Engine	Completed
-Current System Architecture
-                    ZECPATH AI
-                        │
-                        ▼
-                Resume Processing
-                        │
-                        ▼
-                 ATS Scoring Engine
-                        │
-                        ▼
-             Eligibility Decision Engine
-                        │
-                        ▼
-               HR Screening Questions
-                        │
-                        ▼
-               Candidate Speech Input
-                        │
-                        ▼
-                 Speech-to-Text
-                        │
-                        ▼
-               Transcript Processing
-                        │
-                        ▼
-          Answer Intent & Understanding
-                        │
-                        ▼
-             Screening Scoring Engine
-                        │
-                        ▼
-              Final Screening Score
-Current Status
-
-Zecpath AI has successfully completed development through Day 26.
-
-The system can now:
-
-Parse candidate resumes
-Extract candidate skills and experience
-Perform semantic job matching
-Generate ATS scores
-Make eligibility decisions
-Process HR screening questions
-Convert candidate speech into text
-Clean and normalize transcripts
-Understand candidate answer intent
-Extract semantic information from answers
-Detect vague, missing and off-topic answers
-Score candidate responses
-Generate per-question score breakdowns
-Generate normalized final screening scores
-Provide explainable screening results
-
-## Day 27 – Confidence & Sentiment Signal Analysis
-
-Implemented a communication signal analysis layer for HR screening answers.
-
-### Features
-
-- Confidence score calculation
-- Confidence level classification
-- Hesitation detection
-- Uncertainty detection
-- Response length analysis
-- Speaking pace estimation
-- Basic contradiction detection
-- Positive/negative/neutral sentiment scoring
-- Behavioral communication indicators
-- Communication strength assessment
-- Behavioral concern detection
-- Automated Day 27 test coverage
-
-### Day 27 Components
-
-- `analysis/confidence_analyzer.py`
-- `analysis/sentiment_scorer.py`
-- `analysis/behavioral_report.py`
-- `tests/test_day27_confidence_sentiment.py`
-- `demo_day27.py`
-
-### Example Analysis
-
-The Day 27 demo analyzes a candidate's screening response and produces:
-
-- Confidence score
-- Confidence level
-- Hesitation count
-- Uncertainty count
-- Speaking pace
-- Sentiment label
-- Sentiment score
-- Communication strength
-- Strength indicators
-- Behavioral concerns
-
-### Day 27 Validation
-
-All automated tests passed successfully.
-
-Example demo result:
-
-- Sentiment: Positive
-- Sentiment Score: 100
-- Communication Strength: Strong
-- Overall Behavioral Score: 88/100
+START
+  ↓
+ASK QUESTION
+  ↓
+LISTEN
+  ↓
+PROCESS ANSWER
+  │
+  ├── Valid Answer ──────→ Continue
+  │
+  ├── Silence ───────────→ Retry / Fallback
+  │
+  ├── Confusion ─────────→ Clarify
+  │
+  ├── Repeated Answer ───→ Rephrase
+  │
+  └── Off Topic ─────────→ Redirect
+                              ↓
+                         Retry Limit
+                              │
+                    ┌─────────┴─────────┐
+                    ↓                   ↓
+                  Retry              Graceful
+                                     Failure
+```
+
+### Follow-Up Triggers
+
+The follow-up engine identifies situations requiring additional questions, including:
+
+* Missing answers
+* Vague answers
+* Off-topic answers
+* Missing experience information
+* Missing salary information
+* Missing availability information
+* Skill-related follow-up questions
+
+### Error Handling
+
+The conversation error handler provides polite responses for:
+
+* Silence
+* Confusion
+* Repeated answers
+* Off-topic responses
+* Processing errors
+* Maximum retry attempts
+
+### Configuration
+
+Conversation behavior is configurable through:
+
+`data/conversation_flow_config.json`
+
+Configurable parameters include:
+
+* Maximum retries
+* Silence handling
+* Confusion handling
+* Repeated-answer handling
+* Off-topic handling
+* Fallback behavior
+* Graceful failure behavior
+
+### Testing
+
+Day 29 functionality is covered by automated tests for:
+
+* Conversation states
+* State transitions
+* Conversation flow
+* Follow-up triggers
+* Error handling
+* Configuration loading
+
+All project tests passed successfully after the Day 29 implementation.
+
+### Day 29 Deliverables
+
+1. AI Call Flow Logic
+2. Conversation State Machine
+3. Error-Handling Flow Design

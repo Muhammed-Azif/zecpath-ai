@@ -1,0 +1,37 @@
+{
+  "version": "1.0",
+  "conversation": {
+    "max_retries": 2,
+    "continue_after_failure": true,
+    "allow_follow_up": true
+  },
+  "silence": {
+    "enabled": true,
+    "max_attempts": 2,
+    "action": "retry"
+  },
+  "confusion": {
+    "enabled": true,
+    "max_attempts": 2,
+    "action": "clarify"
+  },
+  "repeated_answer": {
+    "enabled": true,
+    "max_attempts": 2,
+    "action": "rephrase"
+  },
+  "off_topic": {
+    "enabled": true,
+    "max_attempts": 2,
+    "action": "redirect"
+  },
+  "fallback": {
+    "enabled": true,
+    "action": "move_to_next_question"
+  },
+  "failure": {
+    "enabled": true,
+    "action": "graceful_exit",
+    "message": "We'll move forward with the screening process."
+  }
+}
